@@ -4,6 +4,7 @@ public class DemoTypeCasting
 {
     public static void main(String[] args) 
     {
+        // DemoTypecasting obj=new DemoTypeCasting();///object creation
         // widening(Smallest to largest)
         // byte---->Short--->char----->int---->long----->float----->double(bscilfd)
 
@@ -31,7 +32,7 @@ public class DemoTypeCasting
 
         System.out.println("my double value is "+weight+"\n double to integer value "+fullvalueofweight+"\nint to char "+inttochar+" \nchar to short :"+chartoshort);
 
-
+        
 
         
     }

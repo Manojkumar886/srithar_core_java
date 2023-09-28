@@ -1,11 +1,13 @@
 package fundamentaljava;
 
+import java.util.Scanner;
+
 public class DemoDatatype 
 {
     public static void main(String[] args) 
     {
      		//Demo All dtatypes(collect aadhar card)
-		
+            Scanner scan=new Scanner(System.in);
 			short	SSlcmark=434;
             long  AadharNo = 708988278278278l;
     
