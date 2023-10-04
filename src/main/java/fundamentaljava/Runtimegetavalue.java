@@ -16,7 +16,7 @@ public class Runtimegetavalue
 
         System.out.println("What is your age : \n");
 
-        int age=scan.nextInt();
+        double age=scan.nextDouble();
 
         System.out.println(" what is your 12th Percentage : \n");
 
@@ -29,5 +29,11 @@ public class Runtimegetavalue
         System.out.println(" my name is :\t "+fullname+"\n my age is :\t"+age+"\n my 12th percentage is : \t "+percentage);
         
         System.out.println(" your ration card active is :"+active);
+
+        System.out.println(" please tell us your Initial \n");
+
+        char Initial=scan.next().charAt(0);
+
+        System.out.println("my initial is :"+Initial);
     }
 }
