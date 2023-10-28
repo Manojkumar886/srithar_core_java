@@ -1,4 +1,4 @@
-package fundamentaljava;
+package fundamentaljava.TypeofOperator;
 
 public class RelationOperator 
 {
