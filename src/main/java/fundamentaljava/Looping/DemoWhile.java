@@ -1,4 +1,4 @@
-package Looping;
+package fundamentaljava.Looping;
 
 import java.util.Scanner;
 
