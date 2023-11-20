@@ -29,6 +29,12 @@ public class MethodsActivations
     }
 
 
+    public static void access()
+    {
+        System.out.println(" Checking");
+    }
+
+
     public static void main(String[] args) 
     {
         // classname objectname=new Classname();
@@ -48,6 +54,6 @@ public class MethodsActivations
 
         System.out.println(" Sample1 with floating parameter method is return by "+getting);
 
-        
+        access();
     }
 }
