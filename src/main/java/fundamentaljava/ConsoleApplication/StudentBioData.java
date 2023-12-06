@@ -41,6 +41,25 @@ public class StudentBioData  extends Studentdetails implements StudentdetailsFun
                     System.out.println("list all student details \n");
                     bio.Listallstudentdetails();
                     break;
+                case 3:
+                    System.out.println(" you are choose to update your profile ...");
+                    System.out.println(" please tell us your update reg_no");
+                    int reg=scan.nextInt();
+                    bio.Updatestudentdetails(reg);
+                    break;
+                case 4:
+                    System.out.println(" which value of index you want");
+                    System.out.println(" please enter your mobile no");
+                    long contact=scan.nextLong();
+                    bio.FindIndex(contact);
+                    break;
+                case 5:
+                System.out.println("");
+                case 6:
+                    System.out.println(" which reg no is delete in your studentbiodata");
+                    int reg_no=scan.nextInt();
+                    bio.Deletestudentdetails(reg_no);
+                    break;
                 default:
                     return;
             }
@@ -74,23 +93,65 @@ public class StudentBioData  extends Studentdetails implements StudentdetailsFun
     @Override
     public void Updatestudentdetails(int student_regno)
     {
-
+        for(int i=0;i<studentinformartion.length;i++)
+        {
+            if(studentinformartion[i].getStudent_Regno()==student_regno)
+            {
+                System.out.println(studentinformartion[i]+" which field you want to update in your profile");
+                System.out.println("\n 1.name\n2.place\n3.age\n4.contact\n5.percentage\n6.gender");
+                int execute=scan.nextInt();
+                switch (execute) {
+                    case 1:
+                        System.out.println(" please enter your new name");
+                        String newname=scan.next();
+                        studentinformartion[i].setStudent_Name(newname);
+                        System.out.println(student_regno+" your name is updated successfully");
+                        break;
+                    case 4:
+                        System.out.println(" please enter your new mobile no");
+                        long new_mobile=scan.nextLong();
+                        studentinformartion[i].setStudent_Mobileno(new_mobile);
+                        System.out.println(student_regno+" your mobile no is updated successfully");
+                        break;
+                    default:
+                        return;
+                }
+                return ;
+            }
+        }
     }
 
     @Override
     public void Deletestudentdetails(int student_regno)
     {
+        for(int i=0;i<studentinformartion.length;i++)
+        {
+            if(studentinformartion[i].getStudent_Regno()==student_regno)
+            {
+                studentinformartion[i]=null;
+                System.out.println(student_regno+" has been deleted...!");
+                return;
+            }
+        }
 
     }
 
-    public int FindIndex(long mobile_no)
+    public void FindIndex(long mobile_no)
     {
-        return 0;
+        int i;
+        for( i=0;i<studentinformartion.length;i++)
+        {
+            if(studentinformartion[i].getStudent_Mobileno()==mobile_no)
+            {
+                System.out.println("your value is founded @"+i+"\n"+studentinformartion[i]);
+                return;
+            }
+        }
     }
 
 
-    public void Sortstudentdetails(float percentage)
+    public void Sortstudentdetails()
     {
-
+        
     }
 }

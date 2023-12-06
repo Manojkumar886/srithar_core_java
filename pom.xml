@@ -6,7 +6,7 @@
 
   <groupId>fundamentaljava</groupId>
   <artifactId>srithar_core_java</artifactId>
-  <version>20</version>
+  <version>17</version>
 
   <name>srithar_core_java</name>
   <!-- FIXME change it to the project's website -->
@@ -14,8 +14,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>20</maven.compiler.source>
-    <maven.compiler.target>20</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
   <dependencies>
