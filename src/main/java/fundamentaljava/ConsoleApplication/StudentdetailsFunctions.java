@@ -6,6 +6,6 @@ public interface StudentdetailsFunctions
     public void Listallstudentdetails();
     public void Updatestudentdetails(int student_regno);
     public void Deletestudentdetails(int student_regno);
-    public int  FindIndex(long mobile_no);
-    public  void Sortstudentdetails(float percentage);
+    public void  FindIndex(long mobile_no);
+    public  void Sortstudentdetails();
 }
