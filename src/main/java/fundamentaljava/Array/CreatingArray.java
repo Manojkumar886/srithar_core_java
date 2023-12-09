@@ -2,7 +2,7 @@ package fundamentaljava.Array;
 
 import java.util.Arrays;
 
-public class CreatingArray 
+class CreatingArray 
 {
     public static void main(String[] args) 
     {

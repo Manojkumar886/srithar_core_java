@@ -1,5 +1,7 @@
 package fundamentaljava.StringClass;
 
+import java.util.Arrays;
+
 public class DemoString 
 {
     public static void main(String[] args) 
@@ -53,12 +55,25 @@ public class DemoString
 
         System.out.println(content.contains("Jivi")); //true
 
-        
+        String word="      i am manojkumar from namakkal  ";
 
+        System.out.println(word);// w/o trim
+        System.out.println(word.trim());
 
+        String s1="java string split method by javatpoint";  
+        String[] wordspilt=s1.split(" ",3);
+        for(String w:wordspilt){  
+            System.out.println(w);  
+            }  
 
+            // /getbytes
 
-        
+        String name="SRIDHAR";
+
+        byte[] asci=name.getBytes();
+            for(byte w:asci){  
+            System.out.println(w);  
+            } 
     }
     
 }
