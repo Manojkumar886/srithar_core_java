@@ -1,13 +1,14 @@
 package fundamentaljava.ConsoleApplication;
 
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class StudentBioData  extends Studentdetails implements StudentdetailsFunctions
+public class StudentBioData extends Studentdetails implements StudentdetailsFunctions
 {
 
     static Scanner scan=new Scanner(System.in);
-    Studentdetails []studentinformartion=new Studentdetails[7];
+    Studentdetails []studentinformartion=new Studentdetails[4  ];
 
     public StudentBioData()
     {
@@ -18,9 +19,7 @@ public class StudentBioData  extends Studentdetails implements StudentdetailsFun
     }
     static
     {
-        System.out.println(" Welcome to Goverment Higher Secondary School -Elachipalayam \n");
-
-    }
+        System.out.println(" Welcome to Goverment Higher Secondary School -Elachipalayam \n");    }
 
     public static void main(String[] args)
     {
@@ -54,7 +53,9 @@ public class StudentBioData  extends Studentdetails implements StudentdetailsFun
                     bio.FindIndex(contact);
                     break;
                 case 5:
-                System.out.println("");
+                    System.out.println(" Sorted Your Values :");
+                    bio.Sortstudentdetails();
+                    break;
                 case 6:
                     System.out.println(" which reg no is delete in your studentbiodata");
                     int reg_no=scan.nextInt();
@@ -152,6 +153,41 @@ public class StudentBioData  extends Studentdetails implements StudentdetailsFun
 
     public void Sortstudentdetails()
     {
-        
+        // Arrays.sort(studentinformartion);
+        // System.out.println(Arrays.toString(studentinformartion));
+
+        Studentdetails student=null;
+
+        System.out.println("which field you want sort :");
+        String field=scan.next();
+        for(int index=0;index<studentinformartion.length;index++)
+        {
+            for(int i=index+1;i<studentinformartion.length;i++)
+            {
+                if(field.equalsIgnoreCase("studentname"))
+                {
+                    System.out.println(studentinformartion[index].getStudent_Name());
+                    if(studentinformartion[index].getStudent_Name().compareTo(studentinformartion[i].getStudent_Name())>0)
+                    {
+                        student=studentinformartion[index];
+                        studentinformartion[index]=studentinformartion[i];
+                        studentinformartion[i]=student;
+                    }
+                }
+                else if( field.equalsIgnoreCase("percentage"))
+                {
+                    if(studentinformartion[index].getStudent_12thPercentage()>=studentinformartion[i].getStudent_12thPercentage())
+                    {
+                        student=studentinformartion[index];
+                        studentinformartion[index]=studentinformartion[i];
+                        studentinformartion[i]=student;
+                    }
+                }
+                else
+                {
+                    System.out.println(" your field could't matching....!");
+                }
+            }
+        }
     }
 }

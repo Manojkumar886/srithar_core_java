@@ -18,4 +18,15 @@ public class Studentdetails
     private long Student_Mobileno;
     private float Student_12thPercentage;
     private char Student_Gender;
+
+
+    public void setStudent_Regno(int reg)
+    {
+        Student_Regno=reg;
+    }
+
+    public int getStudent_Regno()
+    {
+        return Student_Regno;
+    }
 }
