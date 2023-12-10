@@ -4,30 +4,16 @@ package fundamentaljava.ConsoleApplication;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class StudentBioData extends Studentdetails implements StudentdetailsFunctions
+public class StudentBioData extends Studentdetails implements StudentdetailsFunctions,Runnable
 {
-
-    static Scanner scan=new Scanner(System.in);
-    Studentdetails []studentinformartion=new Studentdetails[4];
-
-    public StudentBioData()
+    synchronized public void run()
     {
-        studentinformartion[0]=new Studentdetails(1001,"Manoj","Elachipalayam",23,9789355930l,89.87f,'M');
-        studentinformartion[1]=new Studentdetails(1002,"Srithar","Salem",21,9944965787l,85.7f,'M');
-        studentinformartion[2]=new Studentdetails(1003,"Haritha","Pondi",21,8978676776l,9.3f,'F');
-        studentinformartion[3]=new Studentdetails(1004,"Pavithra","Namakkal",24,9500897867l,98.87f,'F');
-    }
-    static
-    {
-        System.out.println(" Welcome to Goverment Higher Secondary School -Elachipalayam \n");    }
-
-    public static void main(String[] args)
-    {
+        System.out.println(" current Thread Name /Id / Priority"+Thread.currentThread().getName()+"/"+Thread.currentThread().getId()+"/"+Thread.currentThread().getPriority());
         StudentBioData bio=new StudentBioData();
         do
         {
             System.out.println("------student registration section----\n");
-            System.out.println("please choose any one \n 1.ADD \n 2.LIST \n 3.UPDATE \n 4.SEARCH \n 5.SORT \n 6.DELETE \n");
+            System.out.println("please choose any one \n 1.ADD \n 2.LIST \n 3.UPDATE \n 4.SEARCH \n 5.SORT \n 6.DELETE \n 7.EXIT \n");
             int process=scan.nextInt();
             switch (process)
             {
@@ -61,11 +47,27 @@ public class StudentBioData extends Studentdetails implements StudentdetailsFunc
                     int reg_no=scan.nextInt();
                     bio.Deletestudentdetails(reg_no);
                     break;
+                case 7:
+                    return;
                 default:
                     return;
             }
         }
         while (true);
+    }
+    static Scanner scan=new Scanner(System.in);
+    Studentdetails []studentinformartion=new Studentdetails[4];
+
+    public StudentBioData()
+    {
+        studentinformartion[0]=new Studentdetails(1001,"Manoj","Elachipalayam",23,9789355930l,89.87f,'M');
+        studentinformartion[1]=new Studentdetails(1002,"Srithar","Salem",21,9944965787l,85.7f,'M');
+        studentinformartion[2]=new Studentdetails(1003,"Haritha","Pondi",21,8978676776l,9.3f,'F');
+        studentinformartion[3]=new Studentdetails(1004,"Pavithra","Namakkal",24,9500897867l,98.87f,'F');
+    }
+    static
+    {
+        System.out.println(" Welcome to Goverment Higher Secondary School -Elachipalayam \n");    
     }
 
     @Override
