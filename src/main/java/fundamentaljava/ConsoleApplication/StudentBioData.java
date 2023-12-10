@@ -8,7 +8,7 @@ public class StudentBioData extends Studentdetails implements StudentdetailsFunc
 {
 
     static Scanner scan=new Scanner(System.in);
-    Studentdetails []studentinformartion=new Studentdetails[4  ];
+    Studentdetails []studentinformartion=new Studentdetails[4];
 
     public StudentBioData()
     {
@@ -71,15 +71,32 @@ public class StudentBioData extends Studentdetails implements StudentdetailsFunc
     @Override
     public String Newstudentdetails(Studentdetails studentinfo)
     {
-        for(int index=0;index<studentinformartion.length;index++)
+        try
         {
-            if(studentinformartion[index]==null)
+            for(int index=0;index<studentinformartion.length;index++)
             {
-                studentinformartion[index]=studentinfo;
-                break;
+                if(studentinformartion[index]==null)
+                {
+                    studentinformartion[index]=studentinfo;
+                    return studentinfo.getStudent_Name()+" has been added successfully";
+                }
             }
+            throw new StudentdetailsException();
+        }
+        catch(StudentdetailsException sde)
+        {
+            System.out.println(sde+" memory is full,suppose if you want to free space in your  memory any one value is delete:");
+            for(Studentdetails std: studentinformartion)
+            {
+                System.out.println(std);
+            }
+            System.out.println(" which one value you want delete :");
+            int regno1=scan.nextInt();
+            Deletestudentdetails(regno1);
+            Newstudentdetails(studentinfo);
         }
         return studentinfo.getStudent_Name()+" has been added successfully";
+
     }
 
     @Override
