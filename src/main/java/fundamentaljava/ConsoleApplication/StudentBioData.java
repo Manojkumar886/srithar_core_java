@@ -142,14 +142,28 @@ public class StudentBioData extends Studentdetails implements StudentdetailsFunc
     @Override
     public void Deletestudentdetails(int student_regno)
     {
-        for(int i=0;i<studentinformartion.length;i++)
+        try
         {
-            if(studentinformartion[i].getStudent_Regno()==student_regno)
+            for(int i=0;i<studentinformartion.length;i++)
             {
-                studentinformartion[i]=null;
-                System.out.println(student_regno+" has been deleted...!");
-                return;
+                if(studentinformartion[i].getStudent_Regno()==student_regno)
+                {
+                   studentinformartion[i]=null;
+                    System.out.println(student_regno+" has been deleted...!");
+                    return;
+                }
             }
+            throw new StudentdetailsException();
+        }
+        catch(StudentdetailsException sde)
+        {
+            System.out.println(sde+" your regno is wrong ,please choose below the any numbers");
+            for(int i=0;i<studentinformartion.length;i++)
+            {
+                System.out.println(studentinformartion[i].getStudent_Regno());
+            }
+            System.out.println(" enter your regno :");
+            Deletestudentdetails(scan.nextInt());
         }
 
     }
