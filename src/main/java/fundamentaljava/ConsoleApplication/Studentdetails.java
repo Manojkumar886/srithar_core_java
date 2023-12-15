@@ -20,15 +20,21 @@ public class Studentdetails implements Comparable<Studentdetails>
     private char Student_Gender;
 
 
-    public void setStudent_Regno(int reg)
-    {
-        Student_Regno=reg;
-    }
+    // public String toString()
+    // {
+    //     return " Studentdetails [ Regno"+Student_Regno+"Name"+Student_Name+" place "+Student_Place+" ]";
+    // }
 
-    public int getStudent_Regno()
-    {
-        return Student_Regno;
-    }
+
+    // public void setStudent_Regno(int reg)
+    // {
+    //     Student_Regno=reg;
+    // }
+
+    // public int getStudent_Regno()
+    // {
+    //     return Student_Regno;
+    // }
 
     @Override
     public int compareTo(Studentdetails o) {
