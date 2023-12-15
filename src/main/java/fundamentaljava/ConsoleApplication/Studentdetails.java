@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data ///getter ,setter ,tostring
 @NoArgsConstructor //default constructor
 @AllArgsConstructor  //Para -cons
-public class Studentdetails
+public class Studentdetails implements Comparable<Studentdetails>
 {
     private int Student_Regno;
     private String Student_Name;
@@ -28,5 +28,12 @@ public class Studentdetails
     public int getStudent_Regno()
     {
         return Student_Regno;
+    }
+
+    @Override
+    public int compareTo(Studentdetails o) {
+        return o.getStudent_Name().compareTo(this.Student_Name);
+        // TODO Auto-generated method stub
+        // throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
     }
 }

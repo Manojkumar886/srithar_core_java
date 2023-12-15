@@ -4,7 +4,7 @@ public class StudentdetailsMain
 {
     public static void main(String[] args) 
     {
-        StudentBioData bio=new StudentBioData();
+        CollectionStudentBio bio=new CollectionStudentBio();
         
         Thread th1=new Thread(bio,"Manojkumar");
         Thread th2=new Thread(bio,"Sridhar");

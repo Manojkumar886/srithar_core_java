@@ -190,7 +190,6 @@ public class StudentBioData extends Studentdetails implements StudentdetailsFunc
         // System.out.println(Arrays.toString(studentinformartion));
 
         Studentdetails student=null;
-
         System.out.println("which field you want sort :");
         String field=scan.next();
         for(int index=0;index<studentinformartion.length;index++)

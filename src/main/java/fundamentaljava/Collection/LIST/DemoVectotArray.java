@@ -1,4 +1,4 @@
-package fundamentaljava.ConsoleApplication;
+package fundamentaljava.Collection.LIST;
 
 import java.util.ArrayList;
 import java.util.Iterator;
