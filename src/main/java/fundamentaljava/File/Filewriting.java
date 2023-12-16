@@ -7,8 +7,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Filewriting 
-{
-    public static void main(String[] args) throws FileNotFoundException
+{public static void main(String[] args) throws FileNotFoundException
     {
         File file=new File("D:\\SritharFiles\\fileconcept.txt");
         // file.mkdir();
