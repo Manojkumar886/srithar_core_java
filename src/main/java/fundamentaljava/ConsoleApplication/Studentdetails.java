@@ -1,6 +1,8 @@
 package fundamentaljava.ConsoleApplication;
 
 
+import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data ///getter ,setter ,tostring
 @NoArgsConstructor //default constructor
 @AllArgsConstructor  //Para -cons
-public class Studentdetails implements Comparable<Studentdetails>
+public class Studentdetails implements Comparable<Studentdetails>,Serializable
 {
     private int Student_Regno;
     private String Student_Name;
