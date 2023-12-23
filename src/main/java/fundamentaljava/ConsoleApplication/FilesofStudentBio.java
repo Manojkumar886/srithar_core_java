@@ -160,7 +160,7 @@ public class FilesofStudentBio extends Studentdetails implements Runnable,Studen
       try {
         read();
         Collections.sort(std);
-        2write();
+        write();
     } catch (ClassNotFoundException | IOException e) {
         // TODO Auto-generated catch block
         e.printStackTrace();
