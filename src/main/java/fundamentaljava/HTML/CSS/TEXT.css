@@ -1,0 +1,53 @@
+ol li
+{
+    text-decoration: line-through;
+    text-align: center;
+    text-shadow: 5px 6px 17px yellowgreen;/*  (right,bottom,bluevarient); */
+    text-transform: capitalize;
+    text-decoration-color: aquamarine;
+
+}
+
+ul{
+    text-transform: uppercase;
+    text-align: center;
+    list-style: linear-gradient(red,pink,yellow);
+    /* list-style: decimal; */
+    /* list-style-image: url(../Images/cat.jpg); */
+    letter-spacing: 20px;
+    word-spacing: 20px;
+    list-style-position: inside;
+    
+}
+
+table
+{
+    border-collapse: collapse;
+    border-style: double;
+    border-width: 2px;
+    /* border-color: cadetblue; */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    border-color: red pink green violet;
+    box-shadow: 3px 6px 8px rgb(165, 105, 105);
+}
+
+table:hover
+{
+    background-color: skyblue;
+    cursor: s-resize;
+}
+
+tr:hover
+{
+    background-color: aliceblue;
+    color: yellowgreen;
+}
+table,tr,td,th 
+{
+    border-style: double;
+    border-width: 2px;
+    
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../CSS/TEXT.css" rel="stylesheet"/>
+    <style>
+        h1:hover{
+            font-size: 40px;
+            font-family: monospace;
+            font-weight: 100px;
+            font-style: italic;
+            font-variant: small-caps;
+            color: transparent;
+            background-image: linear-gradient(190deg,rgb(255, 0, 0),yellow,white);
+            -webkit-background-clip: text;
+            text-align: center;
+        }
+        table
+        {
+            background-image: url(../Images/logo\ goverment.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background-blend-mode: color-burn; */
+        }
+        table:hover{
+            background-image: url(../Images/cat.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            
+        }
+        th:hover{
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(120deg,rgb(244, 50, 83),rgb(76, 218, 76),rgb(141, 141, 31));background-repeat: no-repeat;">
+    <h1> CSS TABLE PROPERTIES</h1>
+    <table style="overflow-x: auto;" >
+        <tbody>
+            <tr>
+                <th colspan="3">Invoice#123456789</th>
+                <th colspan="1">14January2024</th>
+                <th >NUM</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h6>Pay to :</h6><br>
+                    <address>
+                        Acme Billing co.<br>
+                        123 Main st.<br>
+                        Namakkal-6372020.
+                    </address>
+                </td>
+                <td colspan="2">
+                    <h6>Customer :</h6><br>
+                    <address>
+                        7/149-Elachipalayam.<br>
+                        456 Main st.Elachipalayam<br>
+                        Trichengode ,Namakkal-637202.
+                    </address>
+                </td>
+                <td>
+                    1
+                </td>
+            </tr>
+            <tr>
+                <td>"Name"/Description</td>
+                <td>1</td>
+                <td>@</td>
+                <td>COST</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Paperclips</td>
+                <td>1000</td>
+                <td>0.01</td>
+                <td>10.00</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Stables</td>
+                <td>100</td>
+                <td>1.00</td>
+                <td>100.00</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td colspan="3">subtotal</td>
+                <td>110.00</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td colspan="2">Tax</td>
+                <td>8%</td>
+                <td>8.80</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td colspan="3">GRANDTOTAL</td>
+                <td>$118.80</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td colspan="2">02-Mar-2024</td>
+                <td colspan="2">April,10 -2023</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td rowspan="3">4</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td rowspan="2">2</td>
+                <td>3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td colspan="4">1</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
