@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <p id="usingjoin"></p>
+    <script>
+        // let carbrands =[];
+        // carbrands[0]="toyoto";
+        // carbrands[1]="suzuki";
+        // carbrands[2]=1;
+
+
+        let carbrands =new Array();
+
+        // PUSH -add last index
+
+        carbrands.push("AUDI");
+        carbrands.push("BMW");
+        carbrands.push("BOCATTI");
+        carbrands.push("FERRARI");
+        carbrands.push("BENTELY");
+
+        // alert(carbrands);
+
+        // for(i=0; i<carbrands.length;i++)
+        // {
+        //     alert(carbrands[i])
+        // }
+
+        // carbrands.map(getting);
+        // function getting(temp)
+        // {
+        //     alert(temp);
+        // }
+        
+        // POP -last element delete
+        // carbrands.pop();
+
+        // UNSHIFT -The unshift() method adds a new element to an array (at the beginning) 
+        // carbrands.unshift("INNOVA");
+        // carbrands.unshift("VOLGSWAGAN")
+
+        // SHIFT - delete first index
+        //  carbrands.shift();
+
+        // FLAT
+        // let twodarray=[ [1,2],[7,8],[9,99]]
+        // let single=twodarray.flat();
+        // alert(single);
+        
+
+
+        // SLICE 
+        // The slice() method creates a new array.
+        // The slice() method does not remove any elements from the source array.
+        //  The slice() method can take two arguments like slice(1, 3).
+        //  The method then selects elements from the start argument, and up to (but not including) the end argument.
+        // let copycarbrands=  carbrands.slice(2);// delete first two element
+            // let copycarbrands=carbrands.slice(2,4)
+            //  document.write(copycarbrands);
+
+        // SPLICE-
+        
+        // add new items in array
+        // syntex:    
+        // The first parameter (2) defines the position where new elements should be added (spliced in).
+        // The second parameter (0) defines how many elements should be removed.
+        // The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+        // carbrands.splice(2,0,"SUZUKI","HONDA")
+
+        // With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:
+        //The first parameter (0) defines the position where new elements should be added (spliced in).
+        //The second parameter (1) defines how many elements should be removed.
+        // carbrands.splice(2,2)
+
+
+        // DELETE
+        // delete carbrands[4];
+
+        // JOIN
+        // The join() method also joins all array elements into a string.
+        // document.getElementById('usingjoin').innerText=carbrands.join("*");
+
+        document.write(carbrands);
+
+
+        if(carbrands[2]==="BOCTTI")
+        {
+            alert(" car brands second index is same")
+        }
+        else
+        {
+            alert(" Not same")
+        }
+        
+    </script>
+    
+    
+</body>
+</html>

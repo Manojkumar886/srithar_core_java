@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WITH CSS</title>
+</head>
+<body>
+    <h1 align='center' onclick="action()">WELCOME</h1>
+    <p id="css">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem commodi placeat soluta temporibus officia dolores! Quia in odio nisi natus reiciendis culpa provident sit, incidunt inventore autem cum. In, quia?</p>
+    <ul onclick="action()">
+        js display Possibility
+        <li>alert</li>
+        <li >document.write</li>
+        <li>console.log</li>
+    </ul>
+    <script>
+        function action()
+        {
+            let mycontent=document.getElementById('css');
+
+            mycontent.style.fontSize='30px';
+            mycontent.style.backgroundColor='yellow';
+            mycontent.style.textDecoration='overline';
+
+            var usingtagname=document.getElementsByTagName('li')[0];
+
+            usingtagname.style.backgroundColor='pink';
+            usingtagname.style.textShadow=' 13px 5px 3px black'
+        }
+    </script>
+
+</body>
+</html>

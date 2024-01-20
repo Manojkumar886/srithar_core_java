@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerHtml</title>
+</head>
+<body>
+    <!-- <button onclick="document.getElementById('cl').innerHTML=Date()">Click</button>-->
+    <span id="cl">
+            College Time
+    </span> 
+
+    <script>
+        function check()
+        {
+            let mycollegetime=" 9.30AM to 4.30PM  (1pm to 2 pm LUNCH)";
+
+            document.getElementById('cl').innerHTML=mycollegetime;
+        }
+    </script>
+
+    <button onclick="check()"> SHOW COLLEGE TIME</button>
+</body>
+</html>
