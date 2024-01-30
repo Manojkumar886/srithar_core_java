@@ -47,8 +47,6 @@ const showData = () => {
     })
     document.querySelector('#crudTable tbody').innerHTML = html;
 }
-
-
 document.onload = showData();
 
 function addData() {
